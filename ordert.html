@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking & History</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #FADCDC; /* Light Rose Pink */
+            text-align: center;
+        }
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        .order-list {
+            list-style: none;
+            padding: 0;
+        }
+        .order-item {
+            background: #FFF;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .status {
+            font-weight: bold;
+            color: green;
+        }
+        .button {
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .details-btn {
+            background: #007BFF;
+            color: white;
+        }
+        .cancel-btn {
+            background: #DC3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Order Tracking & History</h2>
+    <ul class="order-list">
+        <li class="order-item">
+            <p><strong>Order ID:</strong> #12345</p>
+            <p><strong>Service:</strong> Upcycling</p>
+            <p><strong>Status:</strong> <span class="status">In Progress</span></p>
+            <button class="button details-btn" onclick="viewOrderDetails(12345)">View Details</button>
+            <button class="button cancel-btn" onclick="cancelOrder(12345)">Cancel Order</button>
+        </li>
+        <li class="order-item">
+            <p><strong>Order ID:</strong> #67890</p>
+            <p><strong>Service:</strong> Recycling</p>
+            <p><strong>Status:</strong> <span class="status">Completed</span></p>
+            <button class="button details-btn" onclick="viewOrderDetails(67890)">View Details</button>
+        </li>
+    </ul>
+</div>
+
+<script>
+    function viewOrderDetails(orderId) {
+        alert("Redirecting to details of Order #" + orderId);
+    }
+
+    function cancelOrder(orderId) {
+        if (confirm("Are you sure you want to cancel Order #" + orderId + "?")) {
+            alert("Order #" + orderId + " has been canceled.");
+        }
+    }
+</script>
+
+</body>
+</html>

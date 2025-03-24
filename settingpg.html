@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile & Settings</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #FADCDC; /* Light Rose Pink */
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        .input-group {
+            margin: 15px 0;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .logout-btn {
+            background: #DC3545;
+            margin-top: 15px;
+        }
+        .toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Profile & Settings</h2>
+    
+    <div class="input-group">
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name">
+    </div>
+    
+    <div class="input-group">
+        <label>Contact:</label>
+        <input type="text" placeholder="Enter phone/email">
+    </div>
+    
+    <div class="input-group">
+        <label>Address:</label>
+        <input type="text" placeholder="Enter your address">
+    </div>
+
+    <div class="input-group">
+        <label>Change Password:</label>
+        <input type="password" placeholder="New Password">
+    </div>
+    
+    <div class="input-group toggle">
+        <label>Notifications:</label>
+        <input type="checkbox">
+    </div>
+    
+    <div class="input-group toggle">
+        <label>Privacy Settings:</label>
+        <input type="checkbox">
+    </div>
+    
+    <button>Save Changes</button>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<script>
+    function logout() {
+        if (confirm("Are you sure you want to log out?")) {
+            alert("You have been logged out.");
+        }
+    }
+</script>
+
+</body>
+</html>

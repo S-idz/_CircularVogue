@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login & Signup</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #FADCDC, #79CFE6, #F0BBD3);
+            overflow: hidden;
+        }
+        .container {
+            position: absolute;
+            width: 400px;
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.5s ease-in-out, opacity 0.5s;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #553D4E;
+        }
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            font-size: 16px;
+            outline: none;
+        }
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .switch {
+            position: relative;
+            width: 40px;
+            height: 20px;
+            background: #ddd;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .switch::before {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: #fff;
+            border-radius: 50%;
+            top: 1px;
+            left: 2px;
+            transition: 0.3s;
+        }
+        input:checked + .switch::before {
+            left: 20px;
+            background: #D4AF37;
+        }
+        .button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background: linear-gradient(90deg, #774C60, #D4AF37);
+            color: white;
+            font-size: 18px;
+            transition: transform 0.2s ease;
+        }
+        .button:hover {
+            transform: scale(1.05);
+        }
+        .toggle {
+            background: none;
+            border: none;
+            color: #553D4E;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .hidden {
+            opacity: 0;
+            transform: translateY(-50px);
+            pointer-events: none;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            padding: 10px 15px;
+            color: white;
+            background: #774C60;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background: #5A3E36;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="a.html">← Back to Role Selection</a>
+    </nav>
+    
+    <div class="container" id="login-container">
+        <h2>User Login</h2>
+        <form id="login-form">
+            <input type="email" id="login-email" class="input-field" placeholder="Email" required>
+            <input type="password" id="login-password" class="input-field" placeholder="Password" required>
+            <div class="toggle-switch">
+                <span>Remember Me</span>
+                <input type="checkbox" id="remember-me" hidden>
+                <label for="remember-me" class="switch"></label>
+            </div>
+            <button type="submit" class="button">Login</button>
+        </form>
+        <button class="toggle" onclick="toggleForms()">Don't have an account? Sign Up</button>
+    </div>
+    
+    <div class="container hidden" id="signup-container">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <input type="text" id="signup-name" class="input-field" placeholder="Full Name" required>
+            <input type="email" id="signup-email" class="input-field" placeholder="Email" required>
+            <input type="tel" id="signup-phone" class="input-field" placeholder="Phone Number" required>
+            <input type="password" id="signup-password" class="input-field" placeholder="Password" required>
+            <input type="password" id="signup-confirm-password" class="input-field" placeholder="Confirm Password" required>
+            <div class="toggle-switch">
+                <span>Subscribe to Updates</span>
+                <input type="checkbox" id="subscribe" hidden>
+                <label for="subscribe" class="switch"></label>
+            </div>
+            <label><input type="checkbox" required> Accept Terms & Conditions</label>
+            <button type="submit" class="button">Sign Up</button>
+        </form>
+        <button class="toggle" onclick="toggleForms()">Already have an account? Login</button>
+    </div>
+    
+    <script>
+        function toggleForms() {
+            document.getElementById("login-container").classList.toggle("hidden");
+            document.getElementById("signup-container").classList.toggle("hidden");
+        }
+
+        // Validate Login
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const email = document.getElementById("login-email").value;
+            const password = document.getElementById("login-password").value;
+            if (email && password) {
+                window.location.href = "dashboard.html";
+            } else {
+                alert("Please fill in all fields.");
+            }
+        });
+
+        // Validate Signup
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("signup-name").value;
+            const email = document.getElementById("signup-email").value;
+            const phone = document.getElementById("signup-phone").value;
+            const password = document.getElementById("signup-password").value;
+            const confirmPassword = document.getElementById("signup-confirm-password").value;
+
+            if (!name || !email || !phone || !password || !confirmPassword) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            window.location.href = "dashboard.html";
+        });
+    </script>
+</body>
+</html>

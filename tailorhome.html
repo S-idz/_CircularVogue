@@ -1,0 +1,245 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailor Home Screen</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #FADCDC, #79CFE6, #F0BBD3);
+            text-align: center;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .header-icons {
+            display: flex;
+            gap: 15px;
+        }
+        .icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .dashboard-container {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            width: 80%;
+        }
+        .sections {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .section {
+            width: 30%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #D4AF37;
+            padding: 15px 20px;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Welcome, Tailor!</h2>
+        <div class="header-icons">
+            <span class="icon">🔔</span>
+            <span class="icon">👤</span>
+        </div>
+    </div>
+    
+    <div class="dashboard-container">
+        <h3>Your Tailor Dashboard</h3>
+    </div>
+    
+    <div class="sections">
+        <div class="section">
+            <img src="new_orders.jpg" alt="New Orders">
+            <h3>New Requests</h3>
+            <p>View and accept new upcycling requests.</p>
+            <button class="option-button">View Orders</button>
+        </div>
+        <div class="section">
+            <img src="in_progress.jpg" alt="In Progress">
+            <h3>In Progress</h3>
+            <p>Manage ongoing upcycling projects.</p>
+            <button class="option-button">Track Work</button>
+        </div>
+        <div class="section">
+            <img src="earnings.jpg" alt="Earnings">
+            <h3>Earnings</h3>
+            <p>Check your total earnings and transactions.</p>
+            <button class="option-button">View Earnings</button>
+        </div>
+    </div>
+    
+    <div class="fab" onclick="alert('New Request Feature Coming Soon!')">➕</div>
+</body>
+</html> --->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailor Home Screen</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #FADCDC, #79CFE6, #F0BBD3);
+            text-align: center;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .header-icons {
+            display: flex;
+            gap: 15px;
+        }
+        .icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .dashboard-container {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            width: 80%;
+        }
+        .sections {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #D4AF37;
+            padding: 15px 20px;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Welcome, Tailor!</h2>
+        <div class="header-icons">
+            <span class="icon">🔔</span>
+            <span class="icon">👤</span>
+        </div>
+    </div>
+    
+    <div class="dashboard-container">
+        <h3>Your Tailor Dashboard</h3>
+    </div>
+    
+    <div class="sections">
+        <!-- Orders Management -->
+        <div class="section">
+            <img src="new_orders.jpg" alt="New Orders">
+            <h3>New Requests</h3>
+            <p>View and accept new upcycling requests.</p>
+            <button class="option-button">View Orders</button>
+        </div>
+        <div class="section">
+            <img src="in_progress.jpg" alt="In Progress">
+            <h3>In Progress</h3>
+            <p>Manage ongoing upcycling projects.</p>
+            <button class="option-button">Track Work</button>
+        </div>
+        <div class="section">
+            <img src="order_history.jpg" alt="Order History">
+            <h3>Order History</h3>
+            <p>Review past orders and feedback.</p>
+            <button class="option-button">View History</button>
+        </div>
+        
+        <!-- Financials -->
+        <div class="section">
+            <img src="earnings.jpg" alt="Earnings">
+            <h3>Earnings</h3>
+            <p>Check your total earnings and transactions.</p>
+            <button class="option-button">View Earnings</button>
+        </div>
+        
+        <!-- Communication & Profile -->
+        <div class="section">
+            <img src="customer_chat.jpg" alt="Customer Chat">
+            <h3>Customer Chats</h3>
+            <p>Communicate directly with clients.</p>
+            <button class="option-button">Open Chat</button>
+        </div>
+        <div class="section">
+            <img src="profile_settings.jpg" alt="Profile Settings">
+            <h3>Profile & Availability</h3>
+            <p>Manage your profile and availability.</p>
+            <button class="option-button">Edit Profile</button>
+        </div>
+        
+        <!-- Learning & Contribution -->
+        <div class="section">
+            <img src="tutorials.jpg" alt="Upcycling Tutorials">
+            <h3>Upcycling Tutorials</h3>
+            <p>Learn new upcycling techniques.</p>
+            <button class="option-button">Watch Tutorials</button>
+        </div>
+        <div class="section">
+            <img src="donation.jpg" alt="Donate Excess Fabric">
+            <h3>Donate Excess Fabric</h3>
+            <p>Contribute unused fabric for donations.</p>
+            <button class="option-button">Donate Now</button>
+        </div>
+    </div>
+    
+    <div class="fab" onclick="alert('New Request Feature Coming Soon!')">➕</div>
+</body>
+</html>

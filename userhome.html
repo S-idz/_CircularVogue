@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home Screen</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #FADCDC, #79CFE6, #F0BBD3);
+            text-align: center;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .header-icons {
+            display: flex;
+            gap: 15px;
+        }
+        .icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .upload-container {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            width: 80%;
+        }
+        .upload-box {
+            border: 2px dashed #774C60;
+            padding: 40px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .sections {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .section {
+            width: 30%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #D4AF37;
+            padding: 15px 20px;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Welcome, User!</h2>
+        <div class="header-icons">
+            <span class="icon">🔔</span>
+            <span class="icon">👤</span>
+        </div>
+    </div>
+    
+    <div class="upload-container">
+        <h3>Upload Image for AI Suggestions</h3>
+        <div class="upload-box" onclick="alert('Upload feature coming soon!')">
+            📷 Click to Upload or Drag & Drop
+        </div>
+    </div>
+    
+    <div class="sections">
+        <div class="section">
+            <img src="upcycle.jpg" alt="Upcycle">
+            <h3>Upcycle</h3>
+            <p>Transform old clothes into trendy new pieces.</p>
+            <button class="option-button">Explore</button>
+        </div>
+        <div class="section">
+            <img src="recycle.jpg" alt="Recycle">
+            <h3>Recycle</h3>
+            <p>Turn your clothes into reusable materials.</p>
+            <button class="option-button">Find Centers</button>
+        </div>
+        <div class="section">
+            <img src="donate.jpg" alt="Donate">
+            <h3>Donate</h3>
+            <p>Give your unused clothes to those in need.</p>
+            <button class="option-button">Donate Now</button>
+        </div>
+    </div>
+    
+    <div class="fab" onclick="alert('New Request Coming Soon!')">➕</div>
+</body>
+</html>

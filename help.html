@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #FADCDC;
+            text-align: center;
+        }
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        .faq {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .faq-answer {
+            display: none;
+            padding: 5px 10px;
+            color: #555;
+        }
+        .input-group {
+            margin: 15px 0;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #D4AF37;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background: #B78C28;
+        }
+        .live-chat {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Help & Support</h2>
+        <p>Need assistance? Check our FAQs or contact support.</p>
+        
+        <div class="faq">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-item" onclick="toggleFAQ(0)">
+                <strong>How can I upcycle my clothes?</strong>
+                <div class="faq-answer">You can upload an image and choose AI suggestions or connect with a tailor.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFAQ(1)">
+                <strong>How do I contact a tailor?</strong>
+                <div class="faq-answer">You can find nearby tailors through our Upcycle page.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFAQ(2)">
+                <strong>How can I reset my password?</strong>
+                <div class="faq-answer">Go to the login page and click "Forgot Password".</div>
+            </div>
+        </div>
+
+        <button onclick="contactSupport()">Contact Support</button>
+
+        <div class="live-chat">
+            <h3>Live Chat Support</h3>
+            <p>Chat with our support team (Mock Feature)</p>
+            <button onclick="startLiveChat()">Start Live Chat</button>
+        </div>
+
+        <div class="input-group">
+            <h3>Submit a Complaint</h3>
+            <label>Your Name:</label>
+            <input type="text" placeholder="Enter your name">
+            
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email">
+            
+            <label>Complaint:</label>
+            <textarea rows="4" placeholder="Describe your issue"></textarea>
+            
+            <button onclick="submitComplaint()">Submit Complaint</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleFAQ(index) {
+            let answers = document.querySelectorAll('.faq-answer');
+            answers[index].style.display = answers[index].style.display === 'block' ? 'none' : 'block';
+        }
+
+        function contactSupport() {
+            alert("Redirecting to support contact...");
+        }
+
+        function startLiveChat() {
+            alert("Live chat is currently unavailable. Please use the contact form.");
+        }
+
+        function submitComplaint() {
+            alert("Your complaint has been submitted. Our team will contact you soon.");
+        }
+    </script>
+
+</body>
+</html>

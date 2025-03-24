@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycle Clothes</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #FADCDC;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        .input-group {
+            margin: 15px 0;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+        }
+        select, input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #D4AF37;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background: #B78C28;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Recycle Your Clothes</h2>
+        <p>Give your old clothes a new life through recycling.</p>
+        
+        <div class="input-group">
+            <label for="recycle-category">Select Clothing Type:</label>
+            <select id="recycle-category">
+                <option>Cotton</option>
+                <option>Denim</option>
+                <option>Synthetic</option>
+                <option>Wool</option>
+                <option>Mixed Fabric</option>
+            </select>
+        </div>
+        
+        <div class="input-group">
+            <label>Upload Image (Optional):</label>
+            <input type="file" accept="image/*">
+        </div>
+        
+        <div class="input-group">
+            <label>Choose Recycling Method:</label>
+            <select>
+                <option>Drop-off at Recycling Center</option>
+                <option>Request Pick-Up</option>
+            </select>
+        </div>
+        
+        <div class="input-group">
+            <label>Nearest Recycling Center:</label>
+            <select>
+                <option>Recycling Center A</option>
+                <option>Recycling Center B</option>
+                <option>Recycling Center C</option>
+            </select>
+        </div>
+        
+        <button onclick="submitRecycle()">Confirm Recycling</button>
+    </div>
+    
+    <script>
+        function submitRecycle() {
+            alert("Your recycling request has been submitted! Thank you for contributing to sustainability.");
+        }
+    </script>
+</body>
+</html>

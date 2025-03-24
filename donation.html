@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Clothes</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #FADCDC;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        .input-group {
+            margin: 15px 0;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+        }
+        select, input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #D4AF37;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background: #B78C28;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Donate Your Clothes</h2>
+        <p>Help those in need by donating your pre-loved clothes.</p>
+        
+        <div class="input-group">
+            <label for="category">Select Clothing Category:</label>
+            <select id="category">
+                <option>Men's Clothing</option>
+                <option>Women's Clothing</option>
+                <option>Kids' Clothing</option>
+                <option>Accessories</option>
+                <option>Fabric Scraps</option>
+            </select>
+        </div>
+        
+        <div class="input-group">
+            <label>Upload Image (Optional):</label>
+            <input type="file" accept="image/*">
+        </div>
+        
+        <div class="input-group">
+            <label>Condition of Clothing:</label>
+            <select>
+                <option>New</option>
+                <option>Gently Used</option>
+                <option>Needs Minor Repair</option>
+            </select>
+        </div>
+        
+        <div class="input-group">
+            <label>Select NGO/Charity:</label>
+            <select>
+                <option>Charity A</option>
+                <option>Charity B</option>
+                <option>Charity C</option>
+            </select>
+        </div>
+        
+        <div class="input-group">
+            <label>Donation Method:</label>
+            <select>
+                <option>Request Pick-Up</option>
+                <option>Find Drop-off Location</option>
+            </select>
+        </div>
+        
+        <button onclick="submitDonation()">Confirm Donation</button>
+    </div>
+    
+    <script>
+        function submitDonation() {
+            alert("Thank you for your donation! A confirmation will be sent soon.");
+        }
+    </script>
+</body>
+</html>
