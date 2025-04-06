@@ -14,6 +14,10 @@ Circular Vogue is a sustainable fashion marketplace that promotes recycling, upc
 
 📌 How to Use:1️⃣ Open the Live MVP link above.2️⃣ Go to the Login page and enter a test account.3️⃣ Explore the platform's features!
 
+📽 Demo / Walkthrough
+Watch the project in action: https://youtu.be/1FRNl1SvXUc
+
+
 🛠 Tech Stack
 
 Frontend: HTML, CSS, JavaScript
