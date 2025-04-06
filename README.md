@@ -34,18 +34,6 @@ cd _CircularVogue
 
 3️⃣ Open website_code/index.html in a browser to view the project.
 
-📂 Project Structure
-
-📁 CircularVogue/
-│-- 📁 website_code/      # Contains all website files (HTML, CSS, JS, images)
-│   │-- index.html        # Main homepage
-│   │-- styles.css        # Stylesheets
-│   │-- script.js         # JavaScript functionality
-│   │-- assets/           # Images and icons
-│-- 📄 README.md          # Documentation
-│-- 📄 firebase.json      # Firebase configuration
-│-- 📄 firestore.rules    # Firestore security rules
-
 👥 Team & Contributions
 
 Siddhi Agrawal - Devloper 
